@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "aksilandemo-107c"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "aksilandemo-107c"
+  template:
+    metadata:
+      labels:
+        app: "aksilandemo-107c"
+    spec:
+      containers:
+        - name: "aksilandemo-107c"
+          image: "ilandemo1.azurecr.io/aksilandemo"
+          ports:
+          - containerPort: 80
